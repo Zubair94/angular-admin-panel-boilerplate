@@ -1,34 +1,38 @@
 <div class="container">
-    <div class="card card-login mx-auto mt-5">
-      <div class="card-header">Login</div>
-      <div class="card-body">
-        <form>
-          <div class="form-group">
-            <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
-              <label for="inputEmail">Email address</label>
+  <div class="card card-login mx-auto mt-5">
+  <div class="card-header bg-success">Login</div>
+    <div class="card-body">
+      <form [formGroup]="LoginForm" (ngSubmit)="sendForm()">
+        <div class="form-group">
+          <div class="form-label-group">
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" formControlName="Email" autofocus="autofocus">
+            <label for="inputEmail">Email address</label>
+            <div *ngIf="Email.errors && !Email.pristine">
+              <small *ngIf="Email.errors.required" class="form-text error-color">Email Required</small>
+              <small *ngIf="Email.errors.pattern" class="form-text error-color">Email Invalid</small>
+              <small *ngIf="Email.errors.noEmailExist" class="form-text error-color">Email Not Registered</small>
             </div>
           </div>
-          <div class="form-group">
-            <div class="form-label-group">
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
-              <label for="inputPassword">Password</label>
+        </div>
+        <div class="form-group">
+          <div class="form-label-group">
+            <input [type]="passwordType" id="inputPassword" class="form-control" formControlName="Password" placeholder="Password">
+            <label for="inputPassword">Password</label>
+            <div *ngIf="Password.errors && !Password.pristine">
+              <small *ngIf="Password.errors.required" class="form-text error-color">Password Required</small>
             </div>
           </div>
           <div class="form-group">
             <div class="checkbox">
-              <label>
-                <input type="checkbox" value="remember-me">
-                Remember Password
+              <label for="passwordCheck">
+                <input type="checkbox" id="passwordCheck" formControlName="Checked" (change)="onChecked()">
+                Show Password
               </label>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="index.html">Login</a>
-        </form>
-        <div class="text-center">
-          <a class="d-block small mt-3" href="register.html">Register an Account</a>
-          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
         </div>
-      </div>
+        <button [disabled]="LoginForm.invalid" class="btn btn-success btn-block" type="submit">Login</button>
+      </form>
     </div>
   </div>
+</div>

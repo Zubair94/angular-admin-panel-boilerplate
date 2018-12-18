@@ -1,0 +1,46 @@
+.active-link{
+    fa-icon{
+        color: white;
+    }
+    a{
+        color: white;
+    }
+    span{
+        color: white;
+    }
+}
+  
+.sidebar {
+    height: 100%;
+    min-height: 100vh;
+    .dropdown-item{
+        color: rgba(255, 255, 255, 0.5);
+    }   
+    .dropdown-extra{
+        padding-bottom: 1rem;
+    }
+    .dropdown.show .dropdown-toggle::after {
+        content: none;
+    }
+    .dropdown-toggle{
+        padding-bottom: 0;
+        content: none;  
+    }
+    .dropdown-toggle::after{
+        content: none; 
+    }
+    .dropdown-menu{
+        padding-top:0; 
+        z-index: 0;
+        border: none;
+        background: #212529;
+    }
+    .dropdown-item:hover{
+        background: transparent;
+        color: rgba(255, 255, 255, 0.75);
+    }
+    .dropdown-item:focus{
+        background: transparent;
+        color: rgba(255, 255, 255, 0.75);
+    }
+}

@@ -3,12 +3,26 @@ import { ModuleWithProviders } from '@angular/compiler/src/core';
 
 import { SharedModule } from '../shared/shared.module';
 import { AuthorizationService } from './services/authorization.service';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { ApiRouteInterceptor } from './interceptors/api-route.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ToastrModule } from 'ngx-toastr';
+import { AlertService } from './services/alert.service';
 
 @NgModule({
   declarations: [],
   imports: [
-    SharedModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    ToastrModule.forRoot({
+      timeOut: 6000,
+      positionClass: 'toast-top-center',
+      maxOpened: 3,
+      autoDismiss: true,
+      preventDuplicates: true
+    })
   ],
   exports:[
   ]
@@ -24,7 +38,13 @@ export class CoreModule {
     return {
       ngModule: CoreModule,
       providers: [
-        AuthorizationService
+        AuthorizationService,
+        AlertService,
+        {
+          provide: HTTP_INTERCEPTORS,
+          useClass: ApiRouteInterceptor,
+          multi: true
+        }
       ]
     };
   }

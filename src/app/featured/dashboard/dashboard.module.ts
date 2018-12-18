@@ -8,6 +8,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { TestComponent } from './pages/test/test.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { AnalyticsComponent } from './pages/analytics/analytics.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     NavbarComponent,
     SideNavbarComponent,
     FooterComponent,
-    LogoutModalComponent
+    LogoutModalComponent,
+    AnalyticsComponent
   ],
   imports: [
     SharedModule,
