@@ -6,19 +6,21 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LogoutModalComponent } from './components/logout-modal/logout-modal.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { TestComponent } from './pages/test/test.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AnalyticsComponent } from './pages/analytics/analytics.component';
+import { ArticleUpdateComponent } from './pages/article-update/article-update.component';
+import { CourseUploaderComponent } from './pages/course-uploader/course-uploader.component';
 
 @NgModule({
   declarations: [
     DashboardComponent, 
-    TestComponent,
     NavbarComponent,
     SideNavbarComponent,
     FooterComponent,
     LogoutModalComponent,
-    AnalyticsComponent
+    AnalyticsComponent,
+    ArticleUpdateComponent,
+    CourseUploaderComponent
   ],
   imports: [
     SharedModule,

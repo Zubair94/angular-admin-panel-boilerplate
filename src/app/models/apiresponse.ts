@@ -3,4 +3,5 @@ export interface ApiResponse{
     msg: any;
     token?: any;
     admin?: any;
+    data?:any;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BasicFormBuilder } from 'src/app/models/basicformbuilder';
 import { FormGroup, Validators, FormBuilder, FormControl } from '@angular/forms';
 import { AuthorizationService } from 'src/app/core/services/authorization.service';
@@ -12,7 +12,7 @@ import { emailExistValidator } from 'src/app/shared/directives/email-exist.direc
   styleUrls: ['./authorization.component.scss']
 })
 export class AuthorizationComponent extends BasicFormBuilder implements OnInit {
-
+  
   LoginForm: FormGroup;
   private emailPattern: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   passwordType: string = "password";

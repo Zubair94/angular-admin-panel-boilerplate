@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 import { AlertService } from './services/alert.service';
+import { AdminService } from './services/admin.service';
 
 @NgModule({
   declarations: [],
@@ -40,6 +41,7 @@ export class CoreModule {
       providers: [
         AuthorizationService,
         AlertService,
+        AdminService,
         {
           provide: HTTP_INTERCEPTORS,
           useClass: ApiRouteInterceptor,

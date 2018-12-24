@@ -26,14 +26,14 @@
       <fa-icon [icon]="['fas','upload']"></fa-icon>
       <span> Upload Course</span></a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="index.html">
+  <li class="nav-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+    <a class="nav-link" routerLink="/dashboard/article-update">
       <fa-icon [icon]="['fas','newspaper']"></fa-icon>
-      <span> Article Featured</span>
+      <span> Make Article Featured</span>
     </a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+  <li class="nav-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+    <a class="nav-link" routerLink="/dashboard/course-uploader">
       <fa-icon [icon]="['fas','user-plus']"></fa-icon>
       <span> Add Course Uploader</span></a>
   </li>

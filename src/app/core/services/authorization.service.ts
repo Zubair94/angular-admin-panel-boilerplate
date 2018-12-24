@@ -15,6 +15,11 @@ export class AuthorizationService {
   private API_URL = environment.api_uri;
   constructor(private router: Router, private httpClient: HttpClient) { }
 
+  private urlResolver(url){
+    //console.log(this.API_URL + url);
+    return this.API_URL + url;
+  }
+  
   checkExpired(){
     const decoded = this.tokenDecoder().exp;
     var date = Math.floor(Date.now()/1000);
@@ -23,11 +28,6 @@ export class AuthorizationService {
     } else{
       return false;
     }
-  }
-
-  urlResolver(url){
-    console.log(this.API_URL + url);
-    return this.API_URL + url;
   }
 
   getAuthToken(){

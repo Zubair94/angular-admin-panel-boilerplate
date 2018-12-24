@@ -8,7 +8,7 @@
         <div class="card-body-icon">
           <i class="fas fa-fw fa-comments"></i>
         </div>
-        <div class="mr-5">26 New Messages!</div>
+        <div class="mr-5">{{analytics.user}} Users</div>
       </div>
     </div>
   </div>
@@ -21,7 +21,7 @@
         <div class="card-body-icon">
           <i class="fas fa-fw fa-list"></i>
         </div>
-        <div class="mr-5">11 New Tasks!</div>
+        <div class="mr-5">{{analytics.enrolled}} Enrolled</div>
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
         <div class="card-body-icon">
           <i class="fas fa-fw fa-shopping-cart"></i>
         </div>
-        <div class="mr-5">123 New Orders!</div>
+        <div class="mr-5">{{analytics.notenrolled}} Not Enrolled</div>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@
         <div class="card-body-icon">
           <i class="fas fa-fw fa-life-ring"></i>
         </div>
-        <div class="mr-5">13 New Tickets!</div>
+        <div class="mr-5">{{analytics.inactive}} started course but inactive for 7 days</div>
       </div>
     </div>
   </div>
@@ -55,12 +55,8 @@
 <div class="d-flex w-100 justify-content-center align-items-center">
   <div class="form-group w-50">
     <label for="CourseSelect">Course Name</label>
-    <select class="form-control" id="CourseSelect" [(ngModel)]="binding">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select class="form-control" id="CourseSelect" (change)="onCourseChange()" [(ngModel)]="courseSelected">
+        <option *ngFor="let course of courseList" [ngValue]="course">{{course.courseTitle}}</option>
     </select>
   </div>
 </div>
