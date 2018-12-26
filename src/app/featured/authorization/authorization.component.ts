@@ -23,9 +23,9 @@ export class AuthorizationComponent extends BasicFormBuilder implements OnInit {
   }
 
   ngOnInit() {
-    if(this.authorizationService.isUserLoggedIn()){
+    /*if(this.authorizationService.isUserLoggedIn()){
       this.router.navigate(['/dashboard']);
-    }
+    }*/
   }
 
   createForm(){

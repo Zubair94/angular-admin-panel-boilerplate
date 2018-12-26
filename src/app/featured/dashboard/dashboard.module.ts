@@ -8,9 +8,6 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AnalyticsComponent } from './pages/analytics/analytics.component';
-import { ArticleUpdateComponent } from './pages/article-update/article-update.component';
-import { CourseUploaderComponent } from './pages/course-uploader/course-uploader.component';
-import { PromoteUserComponent } from './pages/promote-user/promote-user.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +16,7 @@ import { PromoteUserComponent } from './pages/promote-user/promote-user.componen
     SideNavbarComponent,
     FooterComponent,
     LogoutModalComponent,
-    AnalyticsComponent,
-    ArticleUpdateComponent,
-    CourseUploaderComponent,
-    PromoteUserComponent
+    AnalyticsComponent
   ],
   imports: [
     SharedModule,

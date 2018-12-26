@@ -12,9 +12,5 @@ export class DashboardComponent implements OnInit {
   constructor(private authorizationService: AuthorizationService, private router: Router) { }
 
   ngOnInit() {
-    if(!this.authorizationService.isUserLoggedIn()){
-      this.router.navigate(['']);
-      this.authorizationService.Logout();
-    }
   }
 }
