@@ -84,28 +84,21 @@ export class AuthorizationService {
 
 
   authenticate(body){
-    //console.log(body);
-    return this.httpClient.post<ApiResponse>(this.urlResolver('admins/authenticate/admin'), body)
-    .pipe(map(response => {
-      //console.log(response);
-      return response;
-    }),
-    catchError(error => {
-      return Observable.throw(error);
-    }));
+    /**
+     * Async Request to Login User in Backend Api
+     * Returns JWT Token
+     */
   }
 
   checkAdminEmail(email){
     const body = {
       email: email
     }
-    return this.httpClient.post<ApiResponse>(this.urlResolver('admins/check/email'), body)
-      .pipe(map(response => {
-        return response;
-      }),
-      catchError(error => {
-        return Observable.throw(error);
-    }));
+    let response = {};
+    return response;
+    /**
+     * Async Request to Check Email Validity in Backend Api
+     */
   }
 
 }

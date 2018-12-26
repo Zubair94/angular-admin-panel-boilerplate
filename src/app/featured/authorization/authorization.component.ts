@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BasicFormBuilder } from 'src/app/models/basicformbuilder';
 import { FormGroup, Validators, FormBuilder, FormControl } from '@angular/forms';
 import { AuthorizationService } from 'src/app/core/services/authorization.service';
@@ -47,13 +47,7 @@ export class AuthorizationComponent extends BasicFormBuilder implements OnInit {
       email: this.Email.value,
       password: this.Password.value
     }
-    this.authorizationService.authenticate(body).subscribe(response => {
-      if(response.success){
-        this.authorizationService.storeAuthToken(response.token);
-        this.alertService.success(response.msg, "Success");
-        this.router.navigate(['/dashboard']);
-      }
-    });
+    this.authorizationService.authenticate(body);
   }
 
   onChecked(){

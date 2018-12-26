@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "teachers-time-admin": {
+    "angular-admin-panel": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -36,7 +36,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/teachers-time-admin",
+            "outputPath": "dist/angular-admin-panel",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -101,18 +101,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "teachers-time-admin:build"
+            "browserTarget": "angular-admin-panel:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "teachers-time-admin:build:production"
+              "browserTarget": "angular-admin-panel:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "teachers-time-admin:build"
+            "browserTarget": "angular-admin-panel:build"
           }
         },
         "test": {
@@ -146,7 +146,7 @@
         }
       }
     },
-    "teachers-time-admin-e2e": {
+    "angular-admin-panel-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -155,11 +155,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "teachers-time-admin:serve"
+            "devServerTarget": "angular-admin-panel:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "teachers-time-admin:serve:production"
+              "devServerTarget": "angular-admin-panel:serve:production"
             }
           }
         },
@@ -175,5 +175,5 @@
       }
     }
   },
-  "defaultProject": "teachers-time-admin"
+  "defaultProject": "angular-admin-panel"
 }
