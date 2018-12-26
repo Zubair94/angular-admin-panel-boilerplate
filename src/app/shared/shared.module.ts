@@ -6,9 +6,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmailExistDirective } from './directives/email-exist.directive';
 import { PasswordMatcherDirective } from './directives/passsword-matcher.directive';
 import { EmailValidDirective } from './directives/email-valid.directive';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
-  declarations: [EmailExistDirective, PasswordMatcherDirective, EmailValidDirective],
+  declarations: [EmailExistDirective, PasswordMatcherDirective, EmailValidDirective, SpinnerComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -23,6 +24,7 @@ import { EmailValidDirective } from './directives/email-valid.directive';
     DataTablesModule,
     FaIconModule,
     EmailExistDirective,
+    SpinnerComponent,
     PasswordMatcherDirective,
     EmailValidDirective
   ]

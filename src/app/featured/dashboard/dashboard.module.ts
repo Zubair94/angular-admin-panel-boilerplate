@@ -10,6 +10,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AnalyticsComponent } from './pages/analytics/analytics.component';
 import { ArticleUpdateComponent } from './pages/article-update/article-update.component';
 import { CourseUploaderComponent } from './pages/course-uploader/course-uploader.component';
+import { PromoteUserComponent } from './pages/promote-user/promote-user.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CourseUploaderComponent } from './pages/course-uploader/course-uploader
     LogoutModalComponent,
     AnalyticsComponent,
     ArticleUpdateComponent,
-    CourseUploaderComponent
+    CourseUploaderComponent,
+    PromoteUserComponent
   ],
   imports: [
     SharedModule,

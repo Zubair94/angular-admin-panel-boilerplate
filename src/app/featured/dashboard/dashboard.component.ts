@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+  
   constructor(private authorizationService: AuthorizationService, private router: Router) { }
 
   ngOnInit() {
@@ -17,5 +17,4 @@ export class DashboardComponent implements OnInit {
       this.authorizationService.Logout();
     }
   }
-
 }

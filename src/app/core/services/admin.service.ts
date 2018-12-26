@@ -39,4 +39,26 @@ export class AdminService {
       return Observable.throw(error);
     }));
   }
+
+  getUsersList(){
+    return this.httpClient.get<ApiResponse>(this.urlResolver('admins/user'))
+    .pipe(map(response => {
+      //console.log(response);
+      return response;
+    }),
+    catchError(error => {
+      return Observable.throw(error);
+    }));
+  }
+
+  promoteMultiUser(body){
+    return this.httpClient.post<ApiResponse>(this.urlResolver('admins/promote'), body)
+    .pipe(map(response => {
+      //console.log(response);
+      return response;
+    }),
+    catchError(error => {
+      return Observable.throw(error);
+    }));
+  }
 }

@@ -37,8 +37,8 @@
       <fa-icon [icon]="['fas','user-plus']"></fa-icon>
       <span> Add Course Uploader</span></a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+  <li class="nav-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
+    <a class="nav-link" routerLink="/dashboard/promote-user">
       <fa-icon [icon]="['fas','user-cog']"></fa-icon>
       <span> Add Blog Author</span></a>
   </li>

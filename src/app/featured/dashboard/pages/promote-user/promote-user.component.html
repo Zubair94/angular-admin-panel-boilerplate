@@ -1,0 +1,33 @@
+<div *ngIf="loading" [ngClass]="{isLoading: true}">
+  <app-spinner></app-spinner>
+</div>
+<div *ngIf="!loading">
+    <div class="card mb-3">
+        <div class="card-header">
+          User List Teachers Time</div>
+        <div class="card-body">
+          <button class="btn btn-primary" type="button" (click)="onPromote()">Promote/Demote</button>
+          <div class="table-responsive">
+            <table class="table table-bordered table-hover" datatable [dtOptions]="dtOptions" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Mobile</th>
+                  <th scope="col">Auth Level</th>
+                </tr>
+              </thead>
+              <tbody>	
+                <tr #userRow (click)="onRowClick(user, i)" *ngFor="let user of users; let i = index;">
+                  <td>{{user.name}}</td>
+                  <td>{{user.email}}</td>
+                  <td>{{user.mobile}}</td>
+                  <td>{{user.authlevel}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+</div>
