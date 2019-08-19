@@ -7,7 +7,7 @@ import * as $ from 'jquery';
 })
 export class NavbarComponent implements OnInit {
 
-  @ViewChild('sideBar') sideBar: ElementRef;
+  @ViewChild('sideBar', { static: true }) sideBar: ElementRef;
   constructor() { }
 
   ngOnInit() {
