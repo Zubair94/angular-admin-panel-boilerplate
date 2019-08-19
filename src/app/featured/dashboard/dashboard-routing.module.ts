@@ -16,6 +16,10 @@ const routes: Routes = [
       {
         path: 'analytics',
         component: AnalyticsComponent
+      },
+      {
+        path: '**',
+        component: AnalyticsComponent
       }
     ]
   }

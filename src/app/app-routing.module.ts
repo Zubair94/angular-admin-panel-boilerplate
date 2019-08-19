@@ -4,11 +4,11 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: 'src/app/featured/authorization/authorization.module#AuthorizationModule'
+    loadChildren: () => import('src/app/featured/authorization/authorization.module').then(m => m.AuthorizationModule)
   },
   {
     path: 'dashboard',
-    loadChildren: 'src/app/featured/dashboard/dashboard.module#DashboardModule'
+    loadChildren: () => import('src/app/featured/dashboard/dashboard.module').then(m => m.DashboardModule)
   }
 ];
 
