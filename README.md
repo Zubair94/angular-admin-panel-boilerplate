@@ -8,8 +8,6 @@ Lazy Loaded, Modular Angular Application
 Toaster with ngx-toastr  
 Font Awesome Icons  
 Template with Bootstrap along with native bootstrap js, jquery  
-No dependency with ng-bootstrap  
-Popper.js support will be added
 
 ## Development server
 
